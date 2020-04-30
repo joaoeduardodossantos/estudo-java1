@@ -1,0 +1,19 @@
+class Conta {
+   int numero;
+   Cliente titular;
+   double saldo;
+   double limite;
+   
+   void saca(double valor){
+       this.saca = this.saca - valor;
+   }
+   
+   void deposita(double valor){
+       this.limite = this.limite + valor;
+   }
+}
+
+class Cliente {
+   String nome;
+   String endereco;
+}

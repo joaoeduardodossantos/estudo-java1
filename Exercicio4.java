@@ -1,0 +1,54 @@
+class Exercico4 {
+   String nome;
+   String departamento;
+   String rg;
+   double salario;
+   
+   void recebeAumento(double valor){
+      this.salario += valor;
+   }
+   
+   double ganhoAnual(){
+      double ganhoAnual = this.salario * 12;
+      return ganhoAnual;
+   }
+
+   void mostra(){
+      System.out.println(
+         "Nome: " + this.nome +
+         "\n Departamento: " + this.departamento +
+         "\n Rg: " + this.rg +
+         "\n Salario: " + this.salario +
+         "\n Ganho Anual: " + this.ganhoAnual());
+   }
+ }
+        
+class TestaExercicio4 {
+   public static void main(String[] args){
+      Exercico4 f1 = new Exercico4();
+      
+      f1.nome = "Joao";
+      f1.salario = 5000.00;
+      f1.rg = "1234567890";
+      f1.recebeAumento(1000.00);
+      f1.mostra();
+           
+      Exercico4 f2 = new Exercico4();
+      
+      f2.nome = "Joao";
+      f2.salario = 5000.00;
+      f2.rg = "1234567890";
+      f2.recebeAumento(1000.00);
+      f2.mostra();
+      
+      if (f1==f2) {
+      	  System.out.println("São iguais");
+      	  } else {
+      	       System.out.println("São diferentes");
+      }
+   }
+}
+      
+      
+      
+      

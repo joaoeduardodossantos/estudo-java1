@@ -1,0 +1,46 @@
+class Funcionario {
+   String nome;
+   String rg;
+}
+    
+ class Empresa {
+     String nome;
+     String cnpj;
+     Funcionario empregados[];
+     	
+	
+	void adiciona(Funcionario f) {
+	    for (int i = 0; i < this.empregados.length; i++) {
+	    	if (empregados[i] == null) continue;
+	    	empregados[i] = f;
+	    }
+	}
+	
+	void mostaFuncionarios(){
+	    for (int i = 0; i < emp.length; i++){
+	       if (emp[i] == null) continue;
+	          return this.emp[i].nome + " - " + this.emp[i].salario;
+		}
+	}
+}
+
+class TestaFuncioanrio {
+   public static void main(String[] args){
+   Empresa emp = new Empresa();
+   
+   emp.empregados = new Funcionario[10];
+   
+   Funcionario func = new Funcionario();
+	func.nome = "Joao";
+	func.salario = 1000.00;
+	emp.adiciona(func);
+   
+   	Funcionario func2 = new Funcionario();
+	func2.nome = "Joao";
+	func2.salario = 1000.00;
+	emp.adiciona(func2);
+     
+
+ }
+}
+     

@@ -1,0 +1,61 @@
+class FuncionarioTeste {
+   String nome;
+   String rg;
+   data dataEntrada;
+}
+
+class DataEntradaEmp{
+    int dia;
+    int mes;
+    int ano;
+    
+    String formataData() {
+       return this.dia +"/"+ this.mes +"/"+ this.ano;
+    }
+ }
+ 
+ class Empresa {
+     String nome;
+     String cnpj;
+     FuncionarioTeste empregados[];
+     	
+	
+	void adiciona(FuncionarioTeste f) {
+	    for (int i = 0; i < this.empregados.length; i++) {
+	    	if (empregados[i] == null) continue;
+	    	empregados[i] = f;
+	    }
+	}
+	
+	void mostaFuncionarios(){
+	    for (int i = 0; i < empregados.length; i++){
+	       if (empregados[i] == null) continue;
+	          return this.empregados[i].nome + " - " + this.empregados[i].salario;
+	       }
+	}
+}
+
+class TestaFuncioanrio {
+   public static void main(String[] args){
+   Empresa emp = new Empresa();
+   
+   emp.empregados = new FuncionarioTeste[10];
+   
+   FuncionarioTeste func = new FuncionarioTeste();
+	func[1].nome = "Joao";
+	func[1].salario = 1000.00;
+	
+	emp.adiciona(func);
+   
+   	FuncionarioTeste func2 = new FuncionarioTeste();
+	func2[2].nome = "Joao";
+	func2[2].salario = 1000.00;
+	
+    	emp.adiciona(func2);
+     
+
+ }
+}
+ 
+ 
+     
